@@ -1,7 +1,9 @@
 # KodexPostsLikes
 
-[![Total Downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress](https://img.shields.io/wordpress/v/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![Version](https://img.shields.io/wordpress/plugin/v/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress Tested](https://img.shields.io/wordpress/v/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress rating](https://img.shields.io/wordpress/plugin/r/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
 
 **Contributors:** Pierre Lebedel
   
