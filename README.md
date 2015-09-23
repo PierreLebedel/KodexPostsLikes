@@ -1,9 +1,10 @@
 # KodexPostsLikes
 
-[![Version](https://img.shields.io/wordpress/plugin/v/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress Tested](https://img.shields.io/wordpress/v/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress rating](https://img.shields.io/wordpress/plugin/r/kodex-posts-likes.svg)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![Version](https://img.shields.io/wordpress/plugin/v/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![Github licence](https://img.shields.io/github/license/PierreLebedel/KodexPostsLikes.svg)](https://github.com/PierreLebedel/KodexPostsLikes)
+[![WordPress Tested](https://img.shields.io/wordpress/v/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress rating](https://img.shields.io/wordpress/plugin/r/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
 
 **Contributors:** Pierre Lebedel
   
