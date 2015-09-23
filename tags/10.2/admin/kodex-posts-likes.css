@@ -1,0 +1,50 @@
+
+
+
+.fixed th#kodex_posts_likes,
+.fixed td.kodex_posts_likes,
+.fixed th#kodex_posts_dislikes,
+.fixed td.kodex_posts_dislikes{width:25px;}
+
+
+
+
+#kodex-posts-likes .hndle a.cdx_settings{
+	color: #aaa;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 0 2px;
+	float: right;
+	position: relative;
+	display:none;
+}
+#kodex-posts-likes .hndle:hover a.cdx_settings,
+#kodex-posts-likes .hndle.hover a.cdx_settings{
+	display:block;
+}
+#kodex-posts-likes .hndle a.cdx_settings:hover{
+	color: #777;
+}
+
+
+
+
+
+#kodex_posts_likes_doc{
+	float:right;
+	width:300px;
+}
+#kodex_posts_likes_doc h4{
+	margin-bottom:0;
+}
+#kodex_posts_likes_doc p{
+	margin-top:0.5em;
+}
+
+
+#kodex_posts_likes_form{
+	margin-right:320px;
+}
+#kodex_posts_likes_form .widefat{
+	clear:none;
+}
