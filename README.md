@@ -5,13 +5,13 @@
 [![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
 [![WordPress rating](https://img.shields.io/wordpress/plugin/r/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
 
-**Contributors:** Pierre Lebedel
-**Tags:** posts, like, dislike, voting, vote
-**Requires at least:** 3.0
-**Tested up to:** 4.3.1
-**Stable tag:** 0.1
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+* **Contributors:** Pierre Lebedel
+* **Tags:** posts, like, dislike, voting, vote
+* **Requires at least:** 3.0
+* **Tested up to:** 4.3.1
+* **Stable tag:** 0.1
+* **License:** GPLv2 or later
+* **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
   
 
 A simple AJaX based WordPress Plugin which allows your visitors to like or dislike posts, pages and cutom post types. 
