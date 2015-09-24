@@ -3,7 +3,7 @@
 Plugin Name: Kodex Posts likes
 Plugin URI: https://wordpress.org/plugins/kodex-posts-likes/
 Description: A simple AJaX based WordPress Plugin which allows your visitors to like or dislike posts, pages and cutom post types. 
-Version: 1.1.0
+Version: 1.0.2
 Author: Pierre Lebedel
 Author URI: http://kodex.pierros.fr/
 Text Domain: kodex
