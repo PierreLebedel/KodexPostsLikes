@@ -189,10 +189,10 @@ class Kodex_Posts_Likes{
 					<h3 class="hndle"><span><?php _e("Documentation", 'kodex'); ?></span></h3>
 					<div class="inside">
 						<h4><?php _e("Display the counter", 'kodex'); ?></h4>
-						<p><code>[kodex_post_like_buttons]</code></p>
+						<p><code>[kodex_post_like_count]</code></p>
 
 						<h4><?php _e("Display the buttons", 'kodex'); ?></h4>
-						<p><code>[kodex_post_like_count]</code></p>
+						<p><code>[kodex_post_like_buttons]</code></p>
 					</div>
 				</div>
 				<div class="postbox">
