@@ -1,0 +1,115 @@
+@import "compass";
+
+
+.kodex_buttons{
+	text-align:center;
+	padding:15px 0 15px 0;
+	vertical-align:top;
+	margin:0;
+
+	button{
+		display:inline-block;
+		height:35px;
+		line-height:35px;
+		vertical-align:top;
+		border:1px solid #ccc;
+		cursor:pointer;
+		@include transition(all 0.15s);
+		font-size:13px;
+		padding:0;
+		margin:0;
+		text-transform:none;
+		outline:none;
+
+		.icon{
+			display:block;
+			padding:0 10px;
+			float:left;
+			text-align:center;
+			font-size:18px;
+
+			&:before{
+				font-family: "dashicons";
+				display:block;
+			}
+		}
+		.text{
+			display:block;
+			float:left;
+			padding-right:10px;
+			font-weight:normal;
+		}
+		.counter{
+			display:block;
+			float:left;
+			padding-right:10px;
+			font-weight:bold;
+		}
+
+		&.kodex_like_button{
+			background:#dfdfdf;
+			border-color:#bfbfbf;
+			color:#999;
+
+			.icon:before{
+				content:"\f529";
+			}
+		} 
+		&.kodex_dislike_button{
+			background:whitesmoke;
+			border-color:#dfdfdf;
+			color:#dfdfdf;
+
+			.icon:before{
+				content: "\f542";
+			}
+		}
+		&:hover{
+			color:#fff;
+			background:#0288d1;
+			border-color:#0277bd;
+		}
+		&.kodex_button_loading{
+			cursor:default;
+			@include opacity(0.7);
+			color:#fff;
+			background:#0288d1;
+			border-color:#0277bd;
+		}
+		&.kodex_button_active{
+			background:#9bd100;
+			color:#fff;
+			border-color:darken(#9bd100,5%);
+		}
+	}
+}
+
+
+.kodex_likes_count{
+	display: block;
+	color: #aeea00;
+	line-height: 24px;
+	height: 24px;
+
+	&:before{
+		font-family: "dashicons";
+		content: "\f529";
+		font-size: 18px;
+		font-weight: normal;
+		padding-right: 8px;
+		float: left;
+	}
+	span{
+		display: block;
+		float: left;
+		font-weight: bold;
+		font-size: 13px;
+	}
+}
+
+
+
+
+
+
+
