@@ -37,6 +37,10 @@
 #kodex_posts_likes_doc p{
 	margin-top:0.5em;
 }
+#kodex_posts_likes_doc pre{
+	font-size:12px;
+	margin-bottom: 5px;
+}
 
 
 #kodex_posts_likes_form{

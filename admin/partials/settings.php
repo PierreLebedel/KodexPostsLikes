@@ -20,6 +20,18 @@
 				</div>
 			</div>
 			<div class="postbox">
+				<h3 class="hndle"><span><?php _e("Custom WP_Query", 'kodex'); ?></span></h3>
+				<div class="inside">
+					<p><?php _e("Ordering posts by descending likes count in a custom query in your theme:", 'kodex'); ?></p>
+<pre>$custom_query = new WP_Query(array(
+  'post_type' => array('post'),
+  'meta_key'  => 'kodex_post_likes_count',
+  'orderby'   => 'meta_value_num',
+  'order'     => 'DESC'
+));</pre>
+				</div>
+			</div>
+			<div class="postbox">
 				<h3 class="hndle"><span><?php _e("Like this plugin?", 'kodex'); ?></span></h3>
 				<div class="inside">
 					<p><?php _e("Do not hesitate to click on Like, it will make me happy!", 'kodex'); ?></p>
@@ -40,9 +52,9 @@
 		<form action="<?php echo $this->settings_url; ?>" method="post" id="kodex_posts_likes_form">
 			<table class="widefat">
 			<thead>
-			    <tr>
-			        <th colspan="2"><b><?php _e('Options', 'kodex'); ?></b></th>
-			    </tr>
+				<tr>
+					<th colspan="2"><b><?php _e('Options', 'kodex'); ?></b></th>
+				</tr>
 			</thead>
 			<tbody>
 				<?php $i=0;

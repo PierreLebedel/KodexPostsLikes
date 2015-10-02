@@ -123,6 +123,7 @@ class Kodex_Posts_Likes {
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'admin_init' );
 		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'plugin_action_links', 10, 2);
 		$this->loader->add_action( "add_meta_boxes", $plugin_admin, 'add_meta_boxes');
+		$this->loader->add_action( "save_post", $plugin_admin, 'save_post', 20, 1);
 	}
 
 	private function define_public_hooks() {

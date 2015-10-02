@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Tue Sep 22 2015 20:20:58 GMT+0200 (Paris, Madrid (heure "
 "d’été))\n"
-"POT-Revision-Date: Fri Oct 02 2015 14:51:51 GMT+0200 (Paris, Madrid (heure "
+"POT-Revision-Date: Fri Oct 02 2015 19:19:09 GMT+0200 (Paris, Madrid (heure "
 "d’été))\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -48,11 +48,11 @@ msgstr ""
 msgid "http://www.pierros.fr"
 msgstr ""
 
-#: ../admin/class-kodex-posts-likes-admin.php:96
+#: ../admin/class-kodex-posts-likes-admin.php:87
 msgid "The options are saved"
 msgstr ""
 
-#: ../admin/class-kodex-posts-likes-admin.php:102
+#: ../admin/class-kodex-posts-likes-admin.php:96
 msgid "Settings"
 msgstr ""
 
@@ -69,86 +69,94 @@ msgid "Display the counter"
 msgstr ""
 
 #: ../admin/partials/settings.php:23
-msgid "Like this plugin?"
+msgid "Custom WP_Query"
 msgstr ""
 
 #: ../admin/partials/settings.php:25
-msgid "Do not hesitate to click on Like, it will make me happy!"
-msgstr ""
-
-#: ../admin/partials/settings.php:33
-msgid "Hey!"
+msgid "Ordering posts by descending likes count in a custom query in your theme:"
 msgstr ""
 
 #: ../admin/partials/settings.php:35
+msgid "Like this plugin?"
+msgstr ""
+
+#: ../admin/partials/settings.php:37
+msgid "Do not hesitate to click on Like, it will make me happy!"
+msgstr ""
+
+#: ../admin/partials/settings.php:45
+msgid "Hey!"
+msgstr ""
+
+#: ../admin/partials/settings.php:47
 msgid "For more ressources and snippets, vitit us at"
 msgstr ""
 
-#: ../admin/partials/settings.php:44
+#: ../admin/partials/settings.php:56
 msgid "Options"
 msgstr ""
 
-#: ../admin/partials/settings.php:91
+#: ../admin/partials/settings.php:103
 msgid "Save"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:32
+#: ../includes/class-kodex-posts-likes.php:28
 msgid "Like button text"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:37
+#: ../includes/class-kodex-posts-likes.php:33
 msgid "Dislike button text"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:42
+#: ../includes/class-kodex-posts-likes.php:38
 msgid "Display the Dislike button"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:47
+#: ../includes/class-kodex-posts-likes.php:43
 msgid "Hide the buttons counters if the number is zero"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:52
+#: ../includes/class-kodex-posts-likes.php:48
 msgid "Hide the buttons counter"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:57
+#: ../includes/class-kodex-posts-likes.php:53
 msgid "Enable for this post types"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:63 ../includes/class-kodex-posts-likes.
-#: php:68
+#: ../includes/class-kodex-posts-likes.php:59 ../includes/class-kodex-posts-likes.
+#: php:64
 msgid "Show on the top of post"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:67
+#: ../includes/class-kodex-posts-likes.php:63
 msgid "Don't show automatically (I use shortcodes)"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:69
+#: ../includes/class-kodex-posts-likes.php:65
 msgid "Show on the bottom of post"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:70
+#: ../includes/class-kodex-posts-likes.php:66
 msgid "Show on the top and on the bottom of post"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:74
+#: ../includes/class-kodex-posts-likes.php:70
 msgid "Alignment"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:78
+#: ../includes/class-kodex-posts-likes.php:74
 msgid "Left"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:79
+#: ../includes/class-kodex-posts-likes.php:75
 msgid "Center"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:80
+#: ../includes/class-kodex-posts-likes.php:76
 msgid "Right"
 msgstr ""
 
-#: ../includes/class-kodex-posts-likes.php:84
+#: ../includes/class-kodex-posts-likes.php:80
 msgid "Include default stylesheet"
 msgstr ""
