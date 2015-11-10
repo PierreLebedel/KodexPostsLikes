@@ -50,8 +50,13 @@ class Kodex_Posts_Likes_Public {
 		wp_localize_script($this->plugin_name, 'kodex_posts_likes', array('ajaxurl'=>admin_url('admin-ajax.php')) );
 	}
 
-	public function shortcode_buttons(){
-		$post_id = get_the_ID();
+	public function shortcode_buttons($atts=array()){
+		//$post_id = get_the_ID();
+		//$post_type = get_post_type($post_id);
+		$a = shortcode_atts(array(
+			'postid' => get_the_ID()
+		), $atts);
+		$post_id = $a['postid'];
 		$post_type = get_post_type($post_id);
 
 		$html = '';
@@ -63,14 +68,27 @@ class Kodex_Posts_Likes_Public {
 		return $html;
 	}
 
-	public function shortcode_count(){
-		$post_id = get_the_ID();
-		$count = (int) get_post_meta($post_id, 'kodex_post_likes_count', true);
-		$html = '';
-		if($count>0){
-			$html = '<div class="kodex_likes_count"><span>'.$count.'</span></div>';
+	public function shortcode_count($atts=array()){
+		//$post_id = get_the_ID();
+		//$count = (int) get_post_meta($post_id, 'kodex_post_likes_count', true);
+		$a = shortcode_atts(array(
+			'postid' => get_the_ID(),
+			'format' => 'html'
+		), $atts);
+
+		$post_id = $a['postid'];
+		$format  = $a['format'];
+		$count   = (int) get_post_meta($post_id, 'kodex_post_likes_count', true);
+
+		if($format=='number'){
+			return $count;
+		}else{
+			$html = '';
+			if($count>0){
+				$html = '<div class="kodex_likes_count"><span>'.$count.'</span></div>';
+			}
+			return $html;
 		}
-		return $html;
 	}
 
 	private function buttons($post_id){

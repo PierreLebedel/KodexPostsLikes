@@ -27,25 +27,29 @@
 
 
 
-#kodex_posts_likes_doc{
+#kodex_posts_likes_sidebar{
 	float:right;
-	width:300px;
+	width:260px;
+	margin-top:10px;
 }
-#kodex_posts_likes_doc h4{
-	margin-bottom:0;
-}
-#kodex_posts_likes_doc p{
-	margin-top:0.5em;
-}
-#kodex_posts_likes_doc pre{
-	font-size:12px;
-	margin-bottom: 5px;
-}
+
+
 
 
 #kodex_posts_likes_form{
-	margin-right:320px;
+	margin-right:280px;
+	margin-top:10px;
 }
 #kodex_posts_likes_form .widefat{
 	clear:none;
+}
+
+#kodex_posts_likes_doc{
+	margin-right:280px;
+	margin-top:10px;
+}
+#kodex_posts_likes_doc p{
+	margin-bottom:0.25em;
+}
+#kodex_posts_likes_doc pre{
 }

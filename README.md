@@ -9,7 +9,7 @@
 * **Tags:** posts, like, dislike, voting, vote
 * **Requires at least:** 4.0
 * **Tested up to:** 4.3.1
-* **Stable tag:** 2.1
+* **Stable tag:** 2.2
 * **License:** GPLv2 or later
 * **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 * **Plugin URI:** https://wordpress.org/plugins/kodex-posts-likes/
@@ -39,14 +39,19 @@ In the admin interface, columns are showing the actual count, and a metabox is v
 
 ## Screenshots ##
 
-1. Plugin options page
+1. Plugin settings page
 ![Plugin options page](https://s.w.org/plugins/kodex-posts-likes/screenshot-1.png)
 
-2. Posts list view
+2. Plugin documentation page
 ![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-2.png)
 
-3. Post edit view
-![Post edit view](https://s.w.org/plugins/kodex-posts-likes/screenshot-3.png)
+3. Posts list view
+![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-3.png)
 
-4. Front-end view
-![Front-end view](https://s.w.org/plugins/kodex-posts-likes/screenshot-4.png)
+4. Post edit view
+![Post edit view](https://s.w.org/plugins/kodex-posts-likes/screenshot-4.png)
+
+5. Front-end view
+![Front-end view](https://s.w.org/plugins/kodex-posts-likes/screenshot-5.png)
+
+

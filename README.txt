@@ -3,7 +3,7 @@ Contributors: Pierre Lebedel
 Tags: posts, like, dislike, voting, vote
 Requires at least: 4.0
 Tested up to: 4.3.1
-Stable tag: 2.1
+Stable tag: 2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,7 +29,20 @@ In the admin interface, columns are showing the actual count, and there is a met
 
 == Screenshots ==
 
-1. Plugin options page
-2. Posts list view
-3. Post edit view
-4. Front-end view
+1. Plugin settings page
+2. Plugin documentation page
+3. Posts list view
+4. Post edit view
+5. Front-end view
+
+
+== Changelog ==
+ 
+= 2.2.0 =
+* Buttons and Counter shortcodes takes postid parameter for a display outside the loop
+* Counter shortcode takes format parameter : html|number
+* Changes in the admin settings area
+* Screenshots update
+ 
+= 2.1.0 =
+* Source code based on WordPress Plugin Boilerplate
