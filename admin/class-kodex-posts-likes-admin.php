@@ -137,10 +137,13 @@ class Kodex_Posts_Likes_Admin {
 
 	public function save_post($post_id){
 		// on définit le compteur à zéro si le post_meta n'existe pas pour pouvoir faire des requêtes avec un orderby même s'il n'y a pas de meta
-		$count = get_post_meta($post_id, 'kodex_post_likes_count', true);
-		if(!$count) update_post_meta($post_id, 'kodex_post_likes_count', 0);
-		$count = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
-		if(!$count) update_post_meta($post_id, 'kodex_post_dislikes_count', 0);
+		//$count = get_post_meta($post_id, 'kodex_post_likes_count', true);
+		$likes = get_post_meta($post_id, 'kodex_post_likes', true);
+		update_post_meta($post_id, 'kodex_post_likes_count', count($likes));
+		
+		//$count = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
+		$dislikes = get_post_meta($post_id, 'kodex_post_dislikes', true);
+		update_post_meta($post_id, 'kodex_post_dislikes_count', count($dislikes));
 	}
 
 }
