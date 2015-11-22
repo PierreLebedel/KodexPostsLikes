@@ -53,5 +53,3 @@ In the admin interface, columns are showing the actual count, and a metabox is v
 
 5. Front-end view
 ![Front-end view](https://s.w.org/plugins/kodex-posts-likes/screenshot-5.png?v=2.2)
-
-
