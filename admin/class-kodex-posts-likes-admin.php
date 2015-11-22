@@ -8,7 +8,7 @@ class Kodex_Posts_Likes_Admin {
 	private $message;
 	private $settings_url;
 	private $ws;
-
+	
 	private $defaults;
 	public $options;
 
@@ -51,14 +51,35 @@ class Kodex_Posts_Likes_Admin {
 				foreach($post_types as $p){
 					add_filter('manage_'.$p.'_posts_columns', array($this, 'admin_columns'));
 					add_action('manage_'.$p.'_posts_custom_column', array($this, 'admin_custom_columns'), 10, 2);
+
+					add_filter('manage_edit-'.$p.'_sortable_columns', array($this, 'admin_columns_sortable'), 10, 2);
+					
 				}
+				add_filter('request', array($this, 'admin_columns_sorting'));
 			}
 		}	
 	}
 
 	public function admin_columns($columns){
+		if(isset($columns['date'])){
+			unset($columns['date']);
+			$date = true;
+		}
 		$columns['kodex_posts_likes'] = '<span class="dashicons dashicons-thumbs-up"></span>';
-		$columns['kodex_posts_dislikes'] = '<span class="dashicons dashicons-thumbs-down"></span>';
+		if( $this->options['show_dislike'] ){
+			$columns['kodex_posts_dislikes'] = '<span class="dashicons dashicons-thumbs-down"></span>';
+		}
+		if($date){
+			$columns['date'] = __('Date');
+		}
+    	return $columns;
+	}
+
+	public function admin_columns_sortable($columns){
+		$columns['kodex_posts_likes'] = 'kodex_posts_likes';
+		if( $this->options['show_dislike'] ){
+			$columns['kodex_posts_dislikes'] = 'kodex_posts_dislikes';
+		}
     	return $columns;
 	}
 
@@ -70,11 +91,21 @@ class Kodex_Posts_Likes_Admin {
 	            echo '<b>'.$likes_i.'</b>';
 	            break;
 	        case 'kodex_posts_dislikes':
-	        	$dislikes    = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
-				$dislikes_i  = ($dislikes) ? $dislikes : 0;
+				$dislikes   = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
+				$dislikes_i = ($dislikes) ? $dislikes : 0;
 	            echo '<b>'.$dislikes_i.'</b>';
 	            break;
 	    }
+	}
+
+	public function admin_columns_sorting($vars){
+		if( isset($vars['orderby']) && $vars['orderby']=='kodex_posts_likes' ){
+	        $vars = array_merge($vars, array(
+				'meta_key' => 'kodex_post_likes_count',
+				'orderby'  => 'meta_value_num'
+			));
+	    }
+    	return $vars;
 	}
 
 	public function set_message($msg){
@@ -139,11 +170,13 @@ class Kodex_Posts_Likes_Admin {
 		// on définit le compteur à zéro si le post_meta n'existe pas pour pouvoir faire des requêtes avec un orderby même s'il n'y a pas de meta
 		//$count = get_post_meta($post_id, 'kodex_post_likes_count', true);
 		$likes = get_post_meta($post_id, 'kodex_post_likes', true);
-		update_post_meta($post_id, 'kodex_post_likes_count', count($likes));
+		$likes_count = ($likes) ? count($likes) : 0;
+		update_post_meta($post_id, 'kodex_post_likes_count', $likes_count);
 		
 		//$count = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
 		$dislikes = get_post_meta($post_id, 'kodex_post_dislikes', true);
-		update_post_meta($post_id, 'kodex_post_dislikes_count', count($dislikes));
+		$dislikes_count = ($dislikes) ? count($dislikes) : 0;
+		update_post_meta($post_id, 'kodex_post_dislikes_count', $dislikes_count);
 	}
 
 }

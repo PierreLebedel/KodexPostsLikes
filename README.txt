@@ -2,8 +2,8 @@
 Contributors: Pierre Lebedel
 Tags: posts, like, dislike, voting, vote
 Requires at least: 4.0
-Tested up to: 4.3.1
-Stable tag: 2.2
+Tested up to: 4.4.0
+Stable tag: 2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ In the admin interface, columns are showing the actual count, and there is a met
 
 
 == Changelog ==
+
+= 2.3.0 =
+* Save post action counter fix (counters began to 1)
+* Sortable posts by like/dislike count in admin area
+* Admin columns style and position
  
 = 2.2.0 =
 * Buttons and Counter shortcodes takes postid parameter for a display outside the loop

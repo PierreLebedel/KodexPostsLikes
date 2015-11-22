@@ -8,8 +8,8 @@
 * **Contributors:** Pierre Lebedel
 * **Tags:** posts, like, dislike, voting, vote
 * **Requires at least:** 4.0
-* **Tested up to:** 4.3.1
-* **Stable tag:** 2.2
+* **Tested up to:** 4.0.0
+* **Stable tag:** 2.3
 * **License:** GPLv2 or later
 * **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 * **Plugin URI:** https://wordpress.org/plugins/kodex-posts-likes/

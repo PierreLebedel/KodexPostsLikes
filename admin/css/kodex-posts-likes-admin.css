@@ -1,9 +1,41 @@
-.fixed th#kodex_posts_likes,
-.fixed td.kodex_posts_likes,
-.fixed th#kodex_posts_dislikes,
-.fixed td.kodex_posts_dislikes{width:25px;}
+th.column-kodex_posts_likes,
+td.kodex_posts_likes,
+th.column-kodex_posts_dislikes,
+td.kodex_posts_dislikes{
+	width:4em;
+	padding: 8px 0;
+    text-align: left;
+}
 
+th.column-kodex_posts_likes a,
+th.column-kodex_posts_dislikes a{
+	padding: 8px 0;
+}
 
+th.column-kodex_posts_likes span:before,
+th.column-kodex_posts_dislikes span:before{
+	color:#444;
+}
+
+td.kodex_posts_likes b,
+td.kodex_posts_dislikes b{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	float:left;
+	padding: 0 8px;
+	min-width: 24px;
+	height: 2em;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #72777c;
+	color: #fff;
+	font-size: 11px;
+	line-height: 21px;
+	text-align: center;
+	margin-top:5px;
+}
 
 
 #kodex-posts-likes .hndle a.cdx_settings{
