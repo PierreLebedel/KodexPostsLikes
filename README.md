@@ -40,18 +40,18 @@ In the admin interface, columns are showing the actual count, and a metabox is v
 ## Screenshots ##
 
 1. Plugin settings page
-![Plugin options page](https://s.w.org/plugins/kodex-posts-likes/screenshot-1.png)
+![Plugin options page](https://s.w.org/plugins/kodex-posts-likes/screenshot-1.png?v=2.2)
 
 2. Plugin documentation page
-![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-2.png)
+![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-2.png?v=2.2)
 
 3. Posts list view
-![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-3.png)
+![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-3.png?v=2.3)
 
 4. Post edit view
-![Post edit view](https://s.w.org/plugins/kodex-posts-likes/screenshot-4.png)
+![Post edit view](https://s.w.org/plugins/kodex-posts-likes/screenshot-4.png?v=2.2)
 
 5. Front-end view
-![Front-end view](https://s.w.org/plugins/kodex-posts-likes/screenshot-5.png)
+![Front-end view](https://s.w.org/plugins/kodex-posts-likes/screenshot-5.png?v=2.2)
 
 
