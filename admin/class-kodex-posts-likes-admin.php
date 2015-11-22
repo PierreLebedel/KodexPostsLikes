@@ -87,13 +87,11 @@ class Kodex_Posts_Likes_Admin {
 		switch($name){
 	        case 'kodex_posts_likes':
 	        	$likes    = get_post_meta($post_id, 'kodex_post_likes_count', true);
-				$likes_i  = ($likes) ? $likes : 0;
-	            echo '<b>'.$likes_i.'</b>';
+				echo ($likes) ? '<b>'.$likes.'</b>' : '—';
 	            break;
 	        case 'kodex_posts_dislikes':
 				$dislikes   = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
-				$dislikes_i = ($dislikes) ? $dislikes : 0;
-	            echo '<b>'.$dislikes_i.'</b>';
+				echo ($dislikes) ? '<b>'.$dislikes.'</b>' : '—';
 	            break;
 	    }
 	}
