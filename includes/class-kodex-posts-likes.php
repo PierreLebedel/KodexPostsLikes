@@ -81,6 +81,11 @@ class Kodex_Posts_Likes {
 				'value' => true,
 				'type'  => 'checkbox'
 			),
+			'dashboard_stats_days' => array(
+				'label' => __("Number of days for the displayed stats on the admin dashboard", 'kodex'),
+				'value' => '7',
+				'type'  => 'number'
+			),
 		);
 		return $defaults;
 	}
@@ -123,7 +128,10 @@ class Kodex_Posts_Likes {
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'admin_init' );
 		$this->loader->add_filter( 'plugin_action_links', $plugin_admin, 'plugin_action_links', 10, 2);
 		$this->loader->add_action( "add_meta_boxes", $plugin_admin, 'add_meta_boxes');
+		$this->loader->add_action( "wp_dashboard_setup", $plugin_admin, 'wp_dashboard_setup');
 		$this->loader->add_action( "save_post", $plugin_admin, 'save_post', 20, 1);
+
+		$this->loader->add_action( "wp_ajax_kodex_likes_dashboard_settings", $plugin_admin, 'kodex_likes_dashboard_settings');
 	}
 
 	private function define_public_hooks() {

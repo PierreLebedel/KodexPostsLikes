@@ -40,8 +40,15 @@ class Kodex_Posts_Likes_Admin {
 		return $this->options;
 	}
 
-	public function get_option($name){
-		return (isset($this->options[$name])) ? $this->options[$name] : false;
+	public function set_option($name, $value=''){
+		$this->set_options();
+		$this->options[$name] = $value;
+		update_option($this->plugin_name, $this->options);
+		$this->set_options();
+	}
+
+	public function get_option($name, $default=false){
+		return (isset($this->options[$name])) ? $this->options[$name] : $default;
 	}
 
 	private function set_admin_columns(){
@@ -72,7 +79,7 @@ class Kodex_Posts_Likes_Admin {
 		if($date){
 			$columns['date'] = __('Date');
 		}
-    	return $columns;
+		return $columns;
 	}
 
 	public function admin_columns_sortable($columns){
@@ -80,30 +87,30 @@ class Kodex_Posts_Likes_Admin {
 		if( $this->options['show_dislike'] ){
 			$columns['kodex_posts_dislikes'] = 'kodex_posts_dislikes';
 		}
-    	return $columns;
+		return $columns;
 	}
 
 	public function admin_custom_columns($name, $post_id){
 		switch($name){
-	        case 'kodex_posts_likes':
-	        	$likes    = get_post_meta($post_id, 'kodex_post_likes_count', true);
+			case 'kodex_posts_likes':
+				$likes    = get_post_meta($post_id, 'kodex_post_likes_count', true);
 				echo ($likes) ? '<b>'.$likes.'</b>' : '—';
-	            break;
-	        case 'kodex_posts_dislikes':
+				break;
+			case 'kodex_posts_dislikes':
 				$dislikes   = get_post_meta($post_id, 'kodex_post_dislikes_count', true);
 				echo ($dislikes) ? '<b>'.$dislikes.'</b>' : '—';
-	            break;
-	    }
+				break;
+		}
 	}
 
 	public function admin_columns_sorting($vars){
 		if( isset($vars['orderby']) && $vars['orderby']=='kodex_posts_likes' ){
-	        $vars = array_merge($vars, array(
+			$vars = array_merge($vars, array(
 				'meta_key' => 'kodex_post_likes_count',
 				'orderby'  => 'meta_value_num'
 			));
-	    }
-    	return $vars;
+		}
+		return $vars;
 	}
 
 	public function set_message($msg){
@@ -111,13 +118,16 @@ class Kodex_Posts_Likes_Admin {
 	}
 
 	public function admin_init(){
-		if( isset($_POST[$this->plugin_name]) ){
-			update_option($this->plugin_name, $_POST[$this->plugin_name]);
+		if( isset($_POST[$this->plugin_name]) && !empty($_POST[$this->plugin_name]) ){
+			$current = $this->set_options();
+			foreach($_POST[$this->plugin_name] as $k=>$v){
+				$current[$k] = $v;
+			}
+			update_option($this->plugin_name, $current);
 			$this->set_message(__('The options are saved', 'kodex'));
 		}
 		$this->set_options();
 		$this->set_admin_columns();
-
 	}
 
 	public function plugin_action_links($links, $file){
@@ -134,7 +144,7 @@ class Kodex_Posts_Likes_Admin {
 
 	public function admin_enqueue_styles() {
 		wp_enqueue_style('dashicons');
-	    wp_enqueue_style( $this->plugin_name.'_front', plugin_dir_url(dirname(__FILE__)).'public/css/kodex-posts-likes-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name.'_front', plugin_dir_url(dirname(__FILE__)).'public/css/kodex-posts-likes-public.css', array(), $this->version, 'all' );
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/kodex-posts-likes-admin.css', array(), $this->version, 'all' );
 	}
@@ -162,6 +172,122 @@ class Kodex_Posts_Likes_Admin {
 	public function meta_box_markup($object){
 		$post_id  = $object->ID;
 		require(plugin_dir_path( __FILE__ ).'partials/metabox.php');
+	}
+
+	public function wp_dashboard_setup(){
+		$days = $this->get_option('dashboard_stats_days', 7);
+		wp_add_dashboard_widget(
+			'kodex_likes_dashboard',
+			__("Kodex Posts likes").' - '.sprintf(esc_html__('Last %s days', 'kodex'), '<em>'.$this->get_option('dashboard_stats_days', 7).'</em>'),
+			array($this, 'kodex_likes_dashboard')
+		);
+	}
+
+	public function kodex_likes_dashboard_settings(){	// ajax
+		//debug($_POST);
+		if(!empty($_POST[$this->plugin_name])){
+			foreach($_POST[$this->plugin_name] as $k=>$v){
+				$this->set_option($k, $v);
+			}
+		}
+		$this->kodex_likes_dashboard();
+		die();
+	}
+
+	public function kodex_likes_dashboard(){
+
+		$days = $this->get_option('dashboard_stats_days', 7);
+
+		?><form action="<?php echo admin_url('admin-ajax.php'); ?>" method="post" id="kodex_dashboard_settings">
+			<label>
+				<?php printf(esc_html__('Show stats of the last %s days', 'kodex'), '<input type="number" name="'.$this->plugin_name.'[dashboard_stats_days]" value="'.esc_attr($days).'" min="1" max="31" step="1" required autocomplete="off">'); ?>
+				&nbsp;&nbsp;
+			</label>
+			<input type="hidden" name="action" value="kodex_likes_dashboard_settings">
+			<button type="submit" class="button button-primary"><?php _e("Save", 'kodex'); ?></button>
+		</form><?php
+
+		$data = $this->get_all_posts_likes();
+		//debug($data);
+		if(!empty($data)){
+			//$current_timestamp  = current_time('timestamp');
+			$current_timestamp    = time();
+			$last_month_timestamp = strtotime('-'.$days.' days', $current_timestamp); 
+
+			foreach($data as $post_id=>$timestamps){
+				foreach($timestamps as $k=>$v){
+					if($v<$last_month_timestamp){
+						unset($data[$post_id][$k]);
+					}
+				}
+				if(empty($data[$post_id])){
+					unset($data[$post_id]);
+				}else{
+					$data[$post_id] = count($data[$post_id]);
+				}
+			}
+			arsort($data);
+
+			if(!empty($data)){
+				$this->kodex_likes_dashboard_table($data);
+			}else{
+				echo '<p>'.__("No vote yet.", 'kodex').'</p>';
+			}
+
+		}else{
+			echo '<p>'.__("No vote yet.", 'kodex').'</p>';
+		}
+	}
+
+	private function kodex_likes_dashboard_table($data){
+		$types = get_post_types(array(), 'objects');
+
+		echo '<table class="widefat fixed striped">
+			<thead>
+				<tr>
+					<th>'.__("Post type", 'kodex').'</th>
+					<th>'.__("Post title", 'kodex').'</th>
+					<th class="count"><span class="dashicons dashicons-thumbs-up"></span></th>
+				</tr>
+			</thead>
+			<tbody>';
+
+		$limit = 15;
+		$i=0;
+		foreach($data as $post_id=>$total){
+			$i++;
+			$type = get_post_type($post_id);
+			echo '<tr class="'.(($i>$limit)?'hidden':'').'">
+				<td>'.$types[$type]->labels->singular_name.'</td>
+				<td><a href="'.get_permalink($post_id).'">'.get_the_title($post_id).'</a></td>
+				<td><b>'.$total.'</b></td>
+			</tr>';
+		}
+
+		echo '</tbody></table>';
+		if($i>$limit){
+			$rest = $i-$limit;
+			echo '<p id="kodex_dashboard_more"><button type="button" class="button">'.sprintf(_n('View %s more', 'View %s more', $rest, 'kodex'), $rest).'</button></p>';
+		}
+	}
+
+	private function get_all_posts_likes(){
+		global $wpdb;
+		$data = array();
+		$results = $wpdb->get_results("SELECT post_id, meta_value FROM $wpdb->postmeta WHERE meta_key = 'kodex_post_likes'");
+		//debug($results);
+		if(!empty($results)){
+			foreach($results as $result){
+				$post_id    = $result->post_id;
+				$post_votes = unserialize($result->meta_value);
+				if(!empty($post_votes)){
+					foreach($post_votes as $k=>$v){
+						$data[$post_id][] = $v;
+					}
+				}
+			}
+		}
+		return $data;
 	}
 
 	public function save_post($post_id){

@@ -25,6 +25,9 @@
 					
 					<?php elseif($object->type=='text'): ?>
 					<input type="text" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="<?php echo esc_attr($value); ?>">
+
+				<?php elseif($object->type=='number'): ?>
+					<input type="number" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="<?php echo esc_attr($value); ?>" min="1" max="31" step="1" required>
 					
 					<?php elseif($object->type=='array'):
 						foreach($object->maybe as $p): ?>

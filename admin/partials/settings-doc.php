@@ -7,6 +7,8 @@
 			<p><code>[kodex_post_like_buttons]</code></p>
 			<p><?php _e("Outside the loop:", 'kodex'); ?> </p>
 			<p><code>[kodex_post_like_buttons postid="1"]</code></p>
+			<p><?php _e("Displayed text inside the buttons can be changed by adding these attributes:", 'kodex'); ?></p>
+			<p><code>[kodex_post_like_buttons liketext="Lol" disliketext="Arf"]</code></p>
 		</div>
 	</div>
 

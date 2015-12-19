@@ -54,15 +54,22 @@ class Kodex_Posts_Likes_Public {
 		//$post_id = get_the_ID();
 		//$post_type = get_post_type($post_id);
 		$a = shortcode_atts(array(
-			'postid' => get_the_ID()
+			'postid'      => get_the_ID(),
+			'liketext'    => false,
+			'disliketext' => false
 		), $atts);
+
 		$post_id = $a['postid'];
 		$post_type = get_post_type($post_id);
 
+		$custom_liketext    = $a['liketext'];
+		$custom_disliketext = $a['disliketext'];
+
 		$html = '';
+		//debug($this->get_option('post_types'));
 		if(in_array($post_type, $this->get_option('post_types'))){
 			$html .= '<div class="kodex_buttons" style="text-align:'.$this->get_option('alignement').';">';
-			$html .= $this->buttons($post_id);
+			$html .= $this->buttons($post_id, $custom_liketext, $custom_disliketext);
 			$html .= '</div>';
 		}
 		return $html;
@@ -91,7 +98,7 @@ class Kodex_Posts_Likes_Public {
 		}
 	}
 
-	private function buttons($post_id){
+	private function buttons($post_id, $custom_liketext=false, $custom_disliketext=false){
 		$html = '';
 		$ident       = $this->get_user_identifier();
 
@@ -99,7 +106,7 @@ class Kodex_Posts_Likes_Public {
 		$pm_likes_a  = (empty($pm_likes)) ? array() : $pm_likes;
 		$like_active = (isset($pm_likes_a[$ident])) ? ' kodex_button_active' : '';
 		$like_count  = count($pm_likes_a);
-		$like_text   = $this->get_option('like_text');
+		$like_text   = ($custom_liketext) ? $custom_liketext : $this->get_option('like_text');
 		$html .= '<button type="button" class="kodex_button kodex_like_button'.$like_active.'" data-id="'.$post_id.'" data-action="like">
 			<span class="icon"></span>';
 			$html .= (!empty($like_text)) ? '<span class="text">'.$like_text.'</span>' : '';
@@ -115,7 +122,7 @@ class Kodex_Posts_Likes_Public {
 			$pm_dislikes_a  = (empty($pm_dislikes)) ? array() : $pm_dislikes;
 			$dislike_active = (isset($pm_dislikes_a[$ident])) ? ' kodex_button_active' : '';
 			$dislike_count  = count($pm_dislikes_a);
-			$dislike_text   = $this->get_option('dislike_text');
+			$dislike_text   = ($custom_disliketext) ? $custom_disliketext : $this->get_option('dislike_text');
 			$html .= '<button type="button" class="kodex_button kodex_dislike_button'.$dislike_active.'" data-id="'.$post_id.'" data-action="dislike">
 				<span class="icon"></span>';
 				$html .= (!empty($dislike_text)) ? '<span class="text">'.$dislike_text.'</span>' : '';

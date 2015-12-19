@@ -1,0 +1,157 @@
+////// POSTS TABLE
+
+th.column-kodex_posts_likes,
+td.kodex_posts_likes,
+th.column-kodex_posts_dislikes,
+td.kodex_posts_dislikes{
+	width:4em;
+	padding: 8px 0;
+    text-align: left;
+}
+
+th.column-kodex_posts_likes a,
+th.column-kodex_posts_dislikes a{
+	padding: 8px 0;
+}
+
+th.column-kodex_posts_likes span:before,
+th.column-kodex_posts_dislikes span:before{
+	color:#444;
+}
+
+td.kodex_posts_likes b,
+td.kodex_posts_dislikes b{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	float:left;
+	padding: 0 8px;
+	min-width: 24px;
+	height: 2em;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #72777c;
+	color: #fff;
+	font-size: 11px;
+	line-height: 21px;
+	text-align: center;
+	margin-top:5px;
+}
+
+///// POST METABOX
+
+#kodex-posts-likes .hndle a.kodex_settings{
+	color: #aaa;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 0 2px;
+	float: right;
+	position: relative;
+	display:none;
+}
+#kodex-posts-likes .hndle:hover a.kodex_settings,
+#kodex-posts-likes .hndle.hover a.kodex_settings{
+	display:block;
+}
+#kodex-posts-likes .hndle a.kodex_settings:hover{
+	color: #777;
+}
+
+
+//// PLUGIN SETTINGS
+
+#kodex_posts_likes_sidebar{
+	float:right;
+	width:260px;
+	margin-top:10px;
+}
+
+
+
+
+#kodex_posts_likes_form{
+	margin-right:280px;
+	margin-top:10px;
+}
+#kodex_posts_likes_form .widefat{
+	clear:none;
+}
+
+#kodex_posts_likes_doc{
+	margin-right:280px;
+	margin-top:10px;
+}
+#kodex_posts_likes_doc p{
+	margin-bottom:0.25em;
+}
+#kodex_posts_likes_doc pre{
+}
+
+
+
+///// ADMIN DASHBOARD
+
+#kodex_likes_dashboard{
+
+	.hndle{
+		em{
+			font-style:normal;
+		}
+		a.kodex_dashboard_settings{
+			color: #aaa;
+			font-size: 16px;
+			line-height: 20px;
+			padding: 0 2px;
+			float: right;
+			position: relative;
+			display:block;
+			text-decoration:none;
+
+			&:hover{
+				color: #777;
+			}
+		}
+	}
+	
+	.inside{
+		margin:0;
+		padding:0;
+		
+		form{
+			text-align:center;
+			font-size:14px;
+			padding:10px 0;
+			display:none;
+
+			label{
+				input{
+					width:55px;
+				}
+			}
+		}
+		table{
+			border:none;
+
+			thead{
+				tr{
+					th{
+						&.count{
+							width:3em;
+						}
+					}
+
+					&.hidden{
+						display:none;
+					}
+				}
+			}
+		}
+		p{
+			padding:0 10px 8px;
+		}
+		#kodex_dashboard_more{
+			text-align:center;
+		}
+	}
+}
