@@ -144,13 +144,13 @@ class Kodex_Posts_Likes_Admin {
 
 	public function admin_enqueue_styles() {
 		wp_enqueue_style('dashicons');
-		wp_enqueue_style( $this->plugin_name.'_front', plugin_dir_url(dirname(__FILE__)).'public/css/kodex-posts-likes-public.css?v='.$this->version, array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name.'_front', plugin_dir_url(dirname(__FILE__)).'public/css/kodex-posts-likes-public.css', array(), $this->version, 'all' );
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/kodex-posts-likes-admin.css', array(), $this->version, 'all' );
 	}
 
 	public function admin_enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/kodex-posts-likes-admin.js?v='.$this->version, array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/kodex-posts-likes-admin.js', array( 'jquery' ), $this->version, false );
 		wp_localize_script($this->plugin_name, 'kodex_posts_likes', array('settings'=>$this->settings_url, 'ws'=>$this->ws));
 	}
 
