@@ -41,12 +41,12 @@ class Kodex_Posts_Likes_Public {
 	public function enqueue_styles() {
 		if( $this->get_option('include_css') ){
 	    	wp_enqueue_style('dashicons');
-	    	wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/kodex-posts-likes-public.css', array(), $this->version, 'all' );
+	    	wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/kodex-posts-likes-public.css?v='.$this->version, array(), $this->version, 'all' );
 	    }
 	}
 
 	public function enqueue_scripts() {
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/kodex-posts-likes-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/kodex-posts-likes-public.js?v='.$this->version, array( 'jquery' ), $this->version, false );
 		wp_localize_script($this->plugin_name, 'kodex_posts_likes', array('ajaxurl'=>admin_url('admin-ajax.php')) );
 	}
 
