@@ -242,11 +242,11 @@ class Kodex_Posts_Likes_Admin {
 	private function kodex_likes_dashboard_table($data){
 		$types = get_post_types(array(), 'objects');
 
-		echo '<table class="widefat fixed striped">
+		echo '<table class="widefat striped">
 			<thead>
 				<tr>
-					<th>'.__("Post type", 'kodex').'</th>
-					<th>'.__("Post title", 'kodex').'</th>
+					<th><nobr>'.__("Post type", 'kodex').'</nobr></th>
+					<th><nobr>'.__("Post title", 'kodex').'</nobr></th>
 					<th class="count"><span class="dashicons dashicons-thumbs-up"></span></th>
 				</tr>
 			</thead>
@@ -258,7 +258,7 @@ class Kodex_Posts_Likes_Admin {
 			$i++;
 			$type = get_post_type($post_id);
 			echo '<tr class="'.(($i>$limit)?'hidden':'').'">
-				<td>'.$types[$type]->labels->singular_name.'</td>
+				<td><nobr>'.$types[$type]->labels->singular_name.'</nobr></td>
 				<td><a href="'.get_permalink($post_id).'">'.get_the_title($post_id).'</a></td>
 				<td><b>'.$total.'</b></td>
 			</tr>';
