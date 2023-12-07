@@ -1,9 +1,9 @@
 # KodexPostsLikes
 
-[![Version](https://img.shields.io/wordpress/plugin/v/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress Tested](https://img.shields.io/wordpress/v/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
-[![WordPress rating](https://img.shields.io/wordpress/plugin/r/kodex-posts-likes.svg?style=flat-square)](http://wordpress.org/plugins/kodex-posts-likes/)
+[![Version](https://img.shields.io/wordpress/plugin/v/kodex-posts-likes.svg?style=flat-square)](https://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress Tested](https://img.shields.io/wordpress/v/kodex-posts-likes.svg?style=flat-square)](https://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress downloads](https://img.shields.io/wordpress/plugin/dt/kodex-posts-likes.svg?style=flat-square)](https://wordpress.org/plugins/kodex-posts-likes/)
+[![WordPress rating](https://img.shields.io/wordpress/plugin/r/kodex-posts-likes.svg?style=flat-square)](https://wordpress.org/plugins/kodex-posts-likes/)
 
 * **Contributors:** Pierre Lebedel
 * **Tags:** posts, like, dislike, voting, vote
@@ -11,9 +11,9 @@
 * **Tested up to:** 4.5.0
 * **Stable tag:** 2.5.0
 * **License:** GPLv2 or later
-* **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+* **License URI:** https://www.gnu.org/licenses/gpl-2.0.html
 * **Plugin URI:** https://wordpress.org/plugins/kodex-posts-likes/
-* **Kodex URI:** http://kodex.pierros.fr/ressource/kodex-posts-likes/
+* **Kodex URI:** https://kodex.pierrelebedel.fr/ressource/kodex-posts-likes/
   
 
 A simple AJaX based WordPress Plugin which allows your visitors to like or dislike posts, pages and cutom post types. 
@@ -40,16 +40,16 @@ In the admin interface, columns are showing the actual count, and a metabox is v
 ## Screenshots ##
 
 1. Plugin settings page
-![Plugin options page](https://s.w.org/plugins/kodex-posts-likes/screenshot-1.png?v=2.2)
+![Plugin options page](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-1.png?v=)
 
 2. Plugin documentation page
-![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-2.png?v=2.2)
+![Posts list view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-2.png?v=)
 
 3. Posts list view
-![Posts list view](https://s.w.org/plugins/kodex-posts-likes/screenshot-3.png?v=2.3)
+![Posts list view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-3.png?v=)
 
 4. Post edit view
-![Post edit view](https://s.w.org/plugins/kodex-posts-likes/screenshot-4.png?v=2.2)
+![Post edit view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-4.png?v=)
 
 5. Front-end view
-![Front-end view](https://s.w.org/plugins/kodex-posts-likes/screenshot-5.png?v=2.2)
+![Front-end view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-5.png?v=)

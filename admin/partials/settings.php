@@ -31,7 +31,7 @@ $tab = (isset($_GET['tab']) && in_array($_GET['tab'], $tabs)) ? $_GET['tab'] : '
 			<div class="postbox">
 				<h3 class="hndle"><span><?php _e("Hey!", 'kodex'); ?></span></h3>
 				<div class="inside">
-					<p><?php _e("For more ressources and snippets, vitit us at", 'kodex'); ?> <a href="http://kodex.pierros.fr" target="_blank">Kodex.Pierros.fr</a></p>
+					<p><?php _e("For more ressources and snippets, vitit us at", 'kodex'); ?> <a href="https://kodex.pierrelebedel.fr" target="_blank">Kodex.PierreLebedel.fr</a></p>
 				</div>
 			</div>
 		</div>

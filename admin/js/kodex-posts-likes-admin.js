@@ -2,9 +2,9 @@ jQuery(function($){
 
 if( $('#kodex-posts-likes').length ){
 	
-	$('#kodex-posts-likes .handlediv').mouseenter(function(){
+	$('#kodex-posts-likes .handlediv').on('mouseenter', function(){
 		$('#kodex-posts-likes h3.hndle').addClass('hover');
-	}).mouseleave(function(){
+	}).on('mouseleave', function(){
 		$('#kodex-posts-likes h3.hndle').removeClass('hover');
 	});
 
@@ -15,15 +15,15 @@ if( $('#kodex-posts-likes').length ){
 if( $('#kodex_likes_dashboard').length ){
 	
 
-	$('#kodex_likes_dashboard .handlediv').mouseenter(function(){
+	$('#kodex_likes_dashboard .handlediv').on('mouseenter', function(){
 		$('#kodex_likes_dashboard h2.hndle').addClass('hover');
-	}).mouseleave(function(){
+	}).on('mouseleave', function(){
 		$('#kodex_likes_dashboard h2.hndle').removeClass('hover');
 	});
 
 	$('#kodex_likes_dashboard h2.hndle').append('<a href="#" class="dashicons dashicons-admin-generic kodex_dashboard_settings" title="Settings"></a>');
 
-	$('.kodex_dashboard_settings').click(function(e){
+	$('.kodex_dashboard_settings').on('click', function(e){
 		e.preventDefault();
 		$('#kodex_dashboard_settings').slideToggle(200);
 	});
@@ -75,7 +75,7 @@ if( $('#kodex_demo_buttons').length ){
 	});
 
 
-	$('#kodex_demo_buttons button').click(function(e){
+	$('#kodex_demo_buttons button').on('click', function(e){
 		e.preventDefault();
 		var button = $(this);
 		var btn_action = (button.is('.kodex_dislike_button')) ? 'dislike' : 'like';

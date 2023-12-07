@@ -28,7 +28,7 @@ msgid "Kodex Posts likes"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "http://kodex.pierros.fr"
+msgid "https://kodex.pierrelebedel.fr"
 msgstr ""
 
 #. Author of the plugin
@@ -36,7 +36,7 @@ msgid "Pierre Lebedel"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "http://www.pierros.fr"
+msgid "https://www.pierrelebedel.fr"
 msgstr ""
 
 #: ../admin/class-kodex-posts-likes-admin.php:203

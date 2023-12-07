@@ -18,7 +18,7 @@ class Kodex_Posts_Likes_Admin {
 		$this->version      = $version;
 		$this->message      = '';
 		$this->settings_url = add_query_arg(array('page'=>$this->plugin_name), admin_url('options-general.php'));
-		$this->ws           = 'http://kodex.pierros.fr/ws/';
+		$this->ws           = 'https://kodex.pierrelebedel.fr/ws/';
 
 		//$this->set_admin_columns();
 	}

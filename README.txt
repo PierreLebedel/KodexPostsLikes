@@ -5,7 +5,7 @@ Requires at least: 4.0
 Tested up to: 6.4.2
 Stable tag: 2.5.0
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 A simple AJaX based WordPress Plugin which allows your visitors to like or dislike posts, pages and cutom post types. 
 
