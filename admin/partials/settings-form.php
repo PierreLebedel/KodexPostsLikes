@@ -20,27 +20,27 @@
 				<td><?php echo $object->label; ?></td>
 				<td>
 					<?php if($object->type=='checkbox'): ?>
-					<input type="hidden" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="0">
-					<input type="checkbox" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="1" <?php echo($value)?'checked':''; ?>>
-					
-					<?php elseif($object->type=='text'): ?>
-					<input type="text" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="<?php echo esc_attr($value); ?>">
+						<input type="hidden" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="0">
+						<input type="checkbox" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="1" <?php echo($value)?'checked':''; ?>>
+						
+						<?php elseif($object->type=='text'): ?>
+						<input type="text" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="<?php echo esc_attr($value); ?>">
 
-				<?php elseif($object->type=='number'): ?>
-					<input type="number" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="<?php echo esc_attr($value); ?>" min="1" max="31" step="1" required>
+					<?php elseif($object->type=='number'): ?>
+						<input type="number" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]" value="<?php echo esc_attr($value); ?>" min="1" max="31" step="1" required>
 					
 					<?php elseif($object->type=='array'):
-						foreach($object->maybe as $p): ?>
+						foreach($object->maybe as $ak=>$av): ?>
 							<label>
-								<input type="checkbox" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>][]" value="<?php echo esc_attr($p); ?>" <?php echo(in_array($p, $value))?'checked':''; ?>>
-								<?php echo $p; ?>
+								<input type="checkbox" name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>][]" value="<?php echo esc_attr($ak); ?>" <?php echo(in_array($ak, $value))?'checked':''; ?>>
+								<?php echo $av; ?> <em style="opacity:0.7;">(<?php echo $ak; ?>)</em>
 							</label><br>
 						<?php endforeach; ?>
 
 					<?php elseif($object->type=='select'): ?>
 						<select name="<?php echo $this->plugin_name; ?>[<?php echo $k; ?>]">
-						<?php foreach($object->maybe as $k=>$v): ?>
-							<option value="<?php echo esc_attr($k); ?>" <?php echo($k==$value)?'selected':''; ?>><?php echo $v; ?></option>
+						<?php foreach($object->maybe as $ak=>$av): ?>
+							<option value="<?php echo esc_attr($ak); ?>" <?php echo($ak==$value)?'selected':''; ?>><?php echo $av; ?></option>
 							</label><br>
 						<?php endforeach; ?>
 						</select>
@@ -52,5 +52,6 @@
 	</tbody>
 	</table>
 
+	<?php wp_nonce_field( 'kodex_posts_likes_admin', 'nonce', true, true ); ?>
 	<br><button type="submit" class="button button-primary"><?php _e("Save", 'kodex'); ?></button>
 </form>

@@ -119,6 +119,9 @@ class Kodex_Posts_Likes_Admin {
 
 	public function admin_init(){
 		if( isset($_POST[$this->plugin_name]) && !empty($_POST[$this->plugin_name]) ){
+			if ( !isset( $_POST['nonce'] ) || !wp_verify_nonce( $_POST['nonce'], 'kodex_posts_likes_admin' ) ) {
+				throw new \Exception("Sorry, your nonce did not verify.");
+			}
 			$current = $this->set_options();
 			foreach($_POST[$this->plugin_name] as $k=>$v){
 				$current[$k] = $v;
@@ -133,7 +136,7 @@ class Kodex_Posts_Likes_Admin {
 	public function plugin_action_links($links, $file){
 		if( basename(str_replace('.php','',$file))==$this->plugin_name ){
 			$settings_link = '<a href="'.$this->settings_url.'">'.__("Settings", 'kodex').'</a>';
-			$links = array_merge($links, array($settings_link));
+			$links = array_merge(array($settings_link), $links);
 		}
 		return $links;
 	}
@@ -184,7 +187,9 @@ class Kodex_Posts_Likes_Admin {
 	}
 
 	public function kodex_likes_dashboard_settings(){	// ajax
-		//debug($_POST);
+		if ( !isset( $_POST['nonce'] ) || !wp_verify_nonce( $_POST['nonce'], 'kodex_posts_likes_admin' ) ) {
+			throw new \Exception("Sorry, your nonce did not verify.");
+		}
 		if(!empty($_POST[$this->plugin_name])){
 			foreach($_POST[$this->plugin_name] as $k=>$v){
 				$this->set_option($k, $v);
@@ -204,6 +209,7 @@ class Kodex_Posts_Likes_Admin {
 				&nbsp;&nbsp;
 			</label>
 			<input type="hidden" name="action" value="kodex_likes_dashboard_settings">
+			<?php wp_nonce_field( 'kodex_posts_likes_admin', 'nonce', true, true ); ?>
 			<button type="submit" class="button button-primary"><?php _e("Save", 'kodex'); ?></button>
 		</form><?php
 

@@ -11,7 +11,7 @@ class Kodex_Posts_Likes {
 	public function __construct() {
 		$this->plugin_title = 'Kodex Posts likes';
 		$this->plugin_name  = 'kodex-posts-likes';
-		$this->version      = '2.4.2';
+		$this->version      = '2.5.0';
 		$this->domain       = 'kodex';
 
 		$this->load_dependencies();
@@ -94,9 +94,27 @@ class Kodex_Posts_Likes {
 		global $wp_post_types;
 		$types = array();
 		foreach($wp_post_types as $k=>$v){
-			if( !in_array($k, array('revision','nav_menu_item','acf','acf-field','acf-field-group', 'wpcf7_contact_form')) ){
-				$types[$k] = $k;
+			if( in_array($k, array(
+				'revision',
+				'nav_menu_item',
+				'acf',
+				'acf-field',
+				'acf-field-group',
+				'wpcf7_contact_form',
+				'custom_css',
+				'customize_changeset',
+				'oembed_cache',
+				'user_request',
+				'wp_block',
+				'wp_template',
+				'wp_template_part',
+				'wp_global_styles',
+				'wp_navigation',
+			)) ){
+				continue;
 			}
+
+			$types[$k] = (isset($v->label)) ? $v->label : $k;
 		}
 		//$this->debug($types);
 		return $types;
