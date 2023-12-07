@@ -40,16 +40,16 @@ In the admin interface, columns are showing the actual count, and a metabox is v
 ## Screenshots ##
 
 1. Plugin settings page
-![Plugin options page](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-1.png?v=)
+![Plugin options page](./assets/screenshot-1.png?v=)
 
 2. Plugin documentation page
-![Posts list view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-2.png?v=)
+![Posts list view](./assets/screenshot-2.png?v=)
 
 3. Posts list view
-![Posts list view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-3.png?v=)
+![Posts list view](./assets/screenshot-3.png?v=)
 
 4. Post edit view
-![Post edit view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-4.png?v=)
+![Post edit view](./assets/screenshot-4.png?v=)
 
 5. Front-end view
-![Front-end view](https://plugins.svn.wordpress.org/kodex-posts-likes/assets/screenshot-5.png?v=)
+![Front-end view](./assets/screenshot-5.png?v=)
