@@ -5,6 +5,7 @@ class Kodex_Posts_Likes_Public {
 	private $plugin_title;
 	private $plugin_name;
 	private $version;
+	private $defaults;
 	
 	public $options;
 
@@ -17,8 +18,8 @@ class Kodex_Posts_Likes_Public {
 	}
 
 	public function set_options(){
-		$this->defaults = Kodex_Posts_Likes::get_defaults();
 		$defaults = array();
+		$this->defaults = Kodex_Posts_Likes::get_defaults();
 		foreach($this->defaults as $k=>$v){
 			$defaults[$k] = $v['value'];
 		}
