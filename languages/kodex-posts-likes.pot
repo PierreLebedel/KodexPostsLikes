@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Kodex Posts Likes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-09 16:16+0000\n"
+"POT-Creation-Date: 2023-12-09 17:15+0000\n"
 "POT-Revision-Date: Sat Dec 19 2015 12:22:26 GMT+0100 (Paris, Madrid)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
@@ -30,11 +30,11 @@ msgid ""
 "dislike posts, pages and cutom post types."
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:70
+#: includes/class-kodex-posts-likes.php:81
 msgid "Alignment"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:75
+#: includes/class-kodex-posts-likes.php:86
 msgid "Center"
 msgstr ""
 
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Custom WP_Query"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:33
+#: includes/class-kodex-posts-likes.php:44
 msgid "Dislike button text"
 msgstr ""
 
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Display the counter"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:38
+#: includes/class-kodex-posts-likes.php:49
 msgid "Display the Dislike button"
 msgstr ""
 
@@ -71,27 +71,32 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:63
+#: includes/class-kodex-posts-likes.php:74
 msgid "Don't show automatically (I use shortcodes)"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:53
+#: includes/class-kodex-posts-likes.php:64
 msgid "Enable for this post types"
 msgstr ""
 
-#: admin/partials/settings.php:34
+#: admin/partials/settings.php:40
+msgid ""
+"Fell free to help with the transmlation of the plugin into your language:"
+msgstr ""
+
+#: admin/partials/settings.php:49
 msgid "For more ressources and snippets, vitit us at"
 msgstr ""
 
-#: admin/partials/settings.php:32
+#: admin/partials/settings.php:47
 msgid "Hey!"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:48
+#: includes/class-kodex-posts-likes.php:59
 msgid "Hide the buttons counter"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:43
+#: includes/class-kodex-posts-likes.php:54
 msgid "Hide the buttons counters if the number is zero"
 msgstr ""
 
@@ -103,7 +108,7 @@ msgstr ""
 msgid "https://www.pierrelebedel.fr"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:80
+#: includes/class-kodex-posts-likes.php:91
 msgid "Include default stylesheet"
 msgstr ""
 
@@ -120,11 +125,11 @@ msgstr ""
 msgid "Last %s days"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:74
+#: includes/class-kodex-posts-likes.php:85
 msgid "Left"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:28
+#: includes/class-kodex-posts-likes.php:39
 msgid "Like button text"
 msgstr ""
 
@@ -137,12 +142,8 @@ msgstr ""
 msgid "No vote yet."
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:85
+#: includes/class-kodex-posts-likes.php:96
 msgid "Number of days for the displayed stats on the admin dashboard"
-msgstr ""
-
-#: admin/partials/settings-form.php:5
-msgid "Options"
 msgstr ""
 
 #: admin/partials/settings-doc.php:29
@@ -166,7 +167,7 @@ msgstr ""
 msgid "Post type"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:76
+#: includes/class-kodex-posts-likes.php:87
 msgid "Right"
 msgstr ""
 
@@ -175,7 +176,8 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: admin/class-kodex-posts-likes-admin.php:138 admin/partials/settings.php:14
+#: admin/class-kodex-posts-likes-admin.php:138
+#: admin/partials/settings-form.php:5 admin/partials/settings.php:14
 msgid "Settings"
 msgstr ""
 
@@ -183,16 +185,16 @@ msgstr ""
 msgid "Shortcode:"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:65
+#: includes/class-kodex-posts-likes.php:76
 msgid "Show on the bottom of post"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:66
+#: includes/class-kodex-posts-likes.php:77
 msgid "Show on the top and on the bottom of post"
 msgstr ""
 
-#: includes/class-kodex-posts-likes.php:59
-#: includes/class-kodex-posts-likes.php:64
+#: includes/class-kodex-posts-likes.php:70
+#: includes/class-kodex-posts-likes.php:75
 msgid "Show on the top of post"
 msgstr ""
 
@@ -201,8 +203,20 @@ msgstr ""
 msgid "Show stats of the last %s days"
 msgstr ""
 
+#: admin/partials/settings.php:38
+msgid "Submit an issue"
+msgstr ""
+
 #: admin/class-kodex-posts-likes-admin.php:130
 msgid "The options are saved"
+msgstr ""
+
+#: admin/partials/settings.php:32
+msgid "This plugin is open source!"
+msgstr ""
+
+#: admin/partials/settings.php:42
+msgid "Translate.WordPress.org"
 msgstr ""
 
 #: admin/class-kodex-posts-likes-admin.php:276
@@ -211,3 +225,13 @@ msgid "View %s more"
 msgid_plural "View %s more"
 msgstr[0] ""
 msgstr[1] ""
+
+#: admin/partials/settings.php:37
+msgid "View on Github"
+msgstr ""
+
+#: admin/partials/settings.php:34
+msgid ""
+"You can access source code, and contribute to its improvement by proposing "
+"your modifications."
+msgstr ""

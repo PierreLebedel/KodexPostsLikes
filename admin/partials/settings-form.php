@@ -2,7 +2,7 @@
 	<table class="widefat">
 	<thead>
 		<tr>
-			<th colspan="2"><b><?php _e('Options', 'kodex-posts-likes'); ?></b></th>
+			<th colspan="2"><b><?php _e('Settings', 'kodex-posts-likes'); ?></b></th>
 		</tr>
 	</thead>
 	<tbody>

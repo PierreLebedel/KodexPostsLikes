@@ -29,6 +29,21 @@ $tab = (isset($_GET['tab']) && in_array($_GET['tab'], $tabs)) ? $_GET['tab'] : '
 				</div>
 			</div>
 			<div class="postbox">
+				<h3 class="hndle"><span><?php _e("This plugin is open source!", 'kodex-posts-likes'); ?></span></h3>
+				<div class="inside">
+					<p><?php _e("You can access source code, and contribute to its improvement by proposing your modifications.", 'kodex-posts-likes'); ?></p>
+					<p><?php _e("You can also use the Issues section to report your problems.", 'kodev-posts-likes'); ?></p>
+					<ul>
+						<li><a href="https://github.com/PierreLebedel/KodexPostsLikes" target="_blank"><?php _e("View on Github", 'kodex-posts-likes'); ?></a></li>
+						<li><a href="https://github.com/PierreLebedel/KodexPostsLikes/issues" target="_blank"><?php _e("Submit an issue", 'kodex-posts-likes'); ?></a></li>
+					</ul>
+					<p><?php _e("Fell free to help with the transmlation of the plugin into your language:", 'kodex-posts-likes'); ?></p>
+					<ul>
+						<li><a href="https://translate.wordpress.org/projects/wp-plugins/kodex-posts-likes/" target="_blank"><?php _e("Translate.WordPress.org", 'kodex-posts-likes'); ?></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="postbox">
 				<h3 class="hndle"><span><?php _e("Hey!", 'kodex-posts-likes'); ?></span></h3>
 				<div class="inside">
 					<p><?php _e("For more ressources and snippets, vitit us at", 'kodex-posts-likes'); ?> <a href="https://kodex.pierrelebedel.fr" target="_blank">Kodex.PierreLebedel.fr</a></p>

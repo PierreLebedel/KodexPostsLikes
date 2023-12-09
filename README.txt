@@ -10,6 +10,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 A simple AJaX based WordPress Plugin which allows your visitors to like or dislike posts, pages and cutom post types. 
 
 == Description ==
+
 The Kodex Posts Likes plugin allows your visitors and logged in users to like or dislike your posts, pages, and custom post types.
 The AJaX based interface is clean and fully customizable.
 The Dislike button is not required, and the buttons labels are editables.
