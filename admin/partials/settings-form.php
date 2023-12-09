@@ -2,7 +2,7 @@
 	<table class="widefat">
 	<thead>
 		<tr>
-			<th colspan="2"><b><?php _e('Options', 'kodex'); ?></b></th>
+			<th colspan="2"><b><?php _e('Options', 'kodex-posts-likes'); ?></b></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -53,5 +53,5 @@
 	</table>
 
 	<?php wp_nonce_field( 'kodex_posts_likes_admin', 'nonce', true, true ); ?>
-	<br><button type="submit" class="button button-primary"><?php _e("Save", 'kodex'); ?></button>
+	<br><button type="submit" class="button button-primary"><?php _e("Save", 'kodex-posts-likes'); ?></button>
 </form>

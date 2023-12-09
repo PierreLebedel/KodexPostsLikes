@@ -127,7 +127,7 @@ class Kodex_Posts_Likes_Admin {
 				$current[$k] = $v;
 			}
 			update_option($this->plugin_name, $current);
-			$this->set_message(__('The options are saved', 'kodex'));
+			$this->set_message(__('The options are saved', 'kodex-posts-likes'));
 		}
 		$this->set_options();
 		$this->set_admin_columns();
@@ -135,7 +135,7 @@ class Kodex_Posts_Likes_Admin {
 
 	public function plugin_action_links($links, $file){
 		if( basename(str_replace('.php','',$file))==$this->plugin_name ){
-			$settings_link = '<a href="'.$this->settings_url.'">'.__("Settings", 'kodex').'</a>';
+			$settings_link = '<a href="'.$this->settings_url.'">'.__("Settings", 'kodex-posts-likes').'</a>';
 			$links = array_merge(array($settings_link), $links);
 		}
 		return $links;
@@ -181,7 +181,7 @@ class Kodex_Posts_Likes_Admin {
 		$days = $this->get_option('dashboard_stats_days', 7);
 		wp_add_dashboard_widget(
 			'kodex_likes_dashboard',
-			__("Kodex Posts likes").' - '.sprintf(esc_html__('Last %s days', 'kodex'), '<em>'.$this->get_option('dashboard_stats_days', 7).'</em>'),
+			__("Kodex Posts Likes").' - '.sprintf(esc_html__('Last %s days', 'kodex-posts-likes'), '<em>'.$this->get_option('dashboard_stats_days', 7).'</em>'),
 			array($this, 'kodex_likes_dashboard')
 		);
 	}
@@ -205,12 +205,12 @@ class Kodex_Posts_Likes_Admin {
 
 		?><form action="<?php echo admin_url('admin-ajax.php'); ?>" method="post" id="kodex_dashboard_settings">
 			<label>
-				<?php printf(esc_html__('Show stats of the last %s days', 'kodex'), '<input type="number" name="'.$this->plugin_name.'[dashboard_stats_days]" value="'.esc_attr($days).'" min="1" max="31" step="1" required autocomplete="off">'); ?>
+				<?php printf(esc_html__('Show stats of the last %s days', 'kodex-posts-likes'), '<input type="number" name="'.$this->plugin_name.'[dashboard_stats_days]" value="'.esc_attr($days).'" min="1" max="31" step="1" required autocomplete="off">'); ?>
 				&nbsp;&nbsp;
 			</label>
 			<input type="hidden" name="action" value="kodex_likes_dashboard_settings">
 			<?php wp_nonce_field( 'kodex_posts_likes_admin', 'nonce', true, true ); ?>
-			<button type="submit" class="button button-primary"><?php _e("Save", 'kodex'); ?></button>
+			<button type="submit" class="button button-primary"><?php _e("Save", 'kodex-posts-likes'); ?></button>
 		</form><?php
 
 		$data = $this->get_all_posts_likes();
@@ -237,11 +237,11 @@ class Kodex_Posts_Likes_Admin {
 			if(!empty($data)){
 				$this->kodex_likes_dashboard_table($data);
 			}else{
-				echo '<p>'.__("No vote yet.", 'kodex').'</p>';
+				echo '<p>'.__("No vote yet.", 'kodex-posts-likes').'</p>';
 			}
 
 		}else{
-			echo '<p>'.__("No vote yet.", 'kodex').'</p>';
+			echo '<p>'.__("No vote yet.", 'kodex-posts-likes').'</p>';
 		}
 	}
 
@@ -251,8 +251,8 @@ class Kodex_Posts_Likes_Admin {
 		echo '<table class="widefat striped">
 			<thead>
 				<tr>
-					<th><nobr>'.__("Post type", 'kodex').'</nobr></th>
-					<th><nobr>'.__("Post title", 'kodex').'</nobr></th>
+					<th><nobr>'.__("Post type", 'kodex-posts-likes').'</nobr></th>
+					<th><nobr>'.__("Post title", 'kodex-posts-likes').'</nobr></th>
 					<th class="count"><span class="dashicons dashicons-thumbs-up"></span></th>
 				</tr>
 			</thead>
@@ -273,7 +273,7 @@ class Kodex_Posts_Likes_Admin {
 		echo '</tbody></table>';
 		if($i>$limit){
 			$rest = $i-$limit;
-			echo '<p id="kodex_dashboard_more"><button type="button" class="button">'.sprintf(_n('View %s more', 'View %s more', $rest, 'kodex'), $rest).'</button></p>';
+			echo '<p id="kodex_dashboard_more"><button type="button" class="button">'.sprintf(_n('View %s more', 'View %s more', $rest, 'kodex-posts-likes'), $rest).'</button></p>';
 		}
 	}
 

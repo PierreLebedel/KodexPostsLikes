@@ -5,14 +5,25 @@ class Kodex_Posts_Likes {
 	protected $loader;
 	protected $plugin_title;
 	protected $plugin_name;
+	protected $plugin_file;
+	protected $plugin_path;
 	protected $domain;
 	protected $version;
 
 	public function __construct() {
-		$this->plugin_title = 'Kodex Posts likes';
-		$this->plugin_name  = 'kodex-posts-likes';
-		$this->version      = '2.5.0';
-		$this->domain       = 'kodex';
+
+		$this->plugin_path = dirname(dirname(__FILE__));
+		$this->plugin_name = basename($this->plugin_path);
+		$this->plugin_file = $this->plugin_path.DIRECTORY_SEPARATOR.$this->plugin_name.'.php';
+		
+		if( !function_exists('get_plugin_data') ){
+			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		}
+		$pluginData = get_plugin_data($this->plugin_file);
+
+		$this->plugin_title = $pluginData['Name'];
+		$this->version      = $pluginData['Version'];
+		$this->domain       = $pluginData['TextDomain'];
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -25,64 +36,64 @@ class Kodex_Posts_Likes {
 	public static function get_defaults(){
 		$defaults = array(
 			'like_text' => array(
-				'label' => __("Like button text", 'kodex'),
+				'label' => __("Like button text", 'kodex-posts-likes'),
 				'value' => 'Like',
 				'type'  => 'text'
 			),
 			'dislike_text' => array(
-				'label' => __("Dislike button text", 'kodex'),
+				'label' => __("Dislike button text", 'kodex-posts-likes'),
 				'value' => 'Dislike',
 				'type'  => 'text'
 			),
 			'show_dislike' => array(
-				'label' => __("Display the Dislike button", 'kodex'),
+				'label' => __("Display the Dislike button", 'kodex-posts-likes'),
 				'value' => true,
 				'type'  => 'checkbox'
 			),
 			'hide_counter_0' => array(
-				'label' => __("Hide the buttons counters if the number is zero", 'kodex'),
+				'label' => __("Hide the buttons counters if the number is zero", 'kodex-posts-likes'),
 				'value' => true,
 				'type'  => 'checkbox'
 			),
 			'hide_counter_total' => array(
-				'label' => __("Hide the buttons counter", 'kodex'),
+				'label' => __("Hide the buttons counter", 'kodex-posts-likes'),
 				'value' => false,
 				'type'  => 'checkbox'
 			),
 			'post_types' => array(
-				'label' => __("Enable for this post types", 'kodex'),
+				'label' => __("Enable for this post types", 'kodex-posts-likes'),
 				'value' => array(),
 				'maybe' => self::get_all_post_types(),
 				'type'  => 'array'
 			),
 			'include_in_post' => array(
-				'label' => __("Show on the top of post", 'kodex'),
+				'label' => __("Show on the top of post", 'kodex-posts-likes'),
 				'value' => 'nope',
 				'type'  => 'select',
 				'maybe' => array(
-					'nope'   => __("Don't show automatically (I use shortcodes)", 'kodex'),
-					'top'    => __("Show on the top of post", 'kodex'),
-					'bottom' => __("Show on the bottom of post", 'kodex'),
-					'both'   => __("Show on the top and on the bottom of post", 'kodex'),
+					'nope'   => __("Don't show automatically (I use shortcodes)", 'kodex-posts-likes'),
+					'top'    => __("Show on the top of post", 'kodex-posts-likes'),
+					'bottom' => __("Show on the bottom of post", 'kodex-posts-likes'),
+					'both'   => __("Show on the top and on the bottom of post", 'kodex-posts-likes'),
 				)
 			),
 			'alignement' => array(
-				'label' => __("Alignment", 'kodex'),
+				'label' => __("Alignment", 'kodex-posts-likes'),
 				'value' => 'center',
 				'type'  => 'select',
 				'maybe' => array(
-					'left'   => __("Left", 'kodex'),
-					'center' => __("Center", 'kodex'),
-					'right'  => __("Right", 'kodex'),
+					'left'   => __("Left", 'kodex-posts-likes'),
+					'center' => __("Center", 'kodex-posts-likes'),
+					'right'  => __("Right", 'kodex-posts-likes'),
 				)
 			),
 			'include_css' => array(
-				'label' => __("Include default stylesheet", 'kodex'),
+				'label' => __("Include default stylesheet", 'kodex-posts-likes'),
 				'value' => true,
 				'type'  => 'checkbox'
 			),
 			'dashboard_stats_days' => array(
-				'label' => __("Number of days for the displayed stats on the admin dashboard", 'kodex'),
+				'label' => __("Number of days for the displayed stats on the admin dashboard", 'kodex-posts-likes'),
 				'value' => '7',
 				'type'  => 'number'
 			),

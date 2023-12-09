@@ -1,0 +1,213 @@
+# Loco Gettext template
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodex Posts Likes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-09 16:16+0000\n"
+"POT-Revision-Date: Sat Dec 19 2015 12:22:26 GMT+0100 (Paris, Madrid)\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. Description of the plugin
+msgid ""
+"A simple AJaX based WordPress Plugin which allows your visitors to like or "
+"dislike posts, pages and cutom post types."
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:70
+msgid "Alignment"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:75
+msgid "Center"
+msgstr ""
+
+#: admin/partials/settings-doc.php:27
+msgid "Custom WP_Query"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:33
+msgid "Dislike button text"
+msgstr ""
+
+#: admin/partials/settings-doc.php:4
+msgid "Display the buttons"
+msgstr ""
+
+#: admin/partials/settings-doc.php:16
+msgid "Display the counter"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:38
+msgid "Display the Dislike button"
+msgstr ""
+
+#: admin/partials/settings-doc.php:10
+msgid ""
+"Displayed text inside the buttons can be changed by adding these attributes:"
+msgstr ""
+
+#: admin/partials/settings.php:24
+msgid "Do not hesitate to click on Like, it will make me happy!"
+msgstr ""
+
+#: admin/partials/settings.php:15
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:63
+msgid "Don't show automatically (I use shortcodes)"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:53
+msgid "Enable for this post types"
+msgstr ""
+
+#: admin/partials/settings.php:34
+msgid "For more ressources and snippets, vitit us at"
+msgstr ""
+
+#: admin/partials/settings.php:32
+msgid "Hey!"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:48
+msgid "Hide the buttons counter"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:43
+msgid "Hide the buttons counters if the number is zero"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://kodex.pierrelebedel.fr/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.pierrelebedel.fr"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:80
+msgid "Include default stylesheet"
+msgstr ""
+
+#: admin/partials/settings-doc.php:6 admin/partials/settings-doc.php:18
+msgid "Inside the loop:"
+msgstr ""
+
+#. Name of the plugin
+msgid "Kodex Posts Likes"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:184
+#, php-format
+msgid "Last %s days"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:74
+msgid "Left"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:28
+msgid "Like button text"
+msgstr ""
+
+#: admin/partials/settings.php:22
+msgid "Like this plugin?"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:240
+#: admin/class-kodex-posts-likes-admin.php:244
+msgid "No vote yet."
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:85
+msgid "Number of days for the displayed stats on the admin dashboard"
+msgstr ""
+
+#: admin/partials/settings-form.php:5
+msgid "Options"
+msgstr ""
+
+#: admin/partials/settings-doc.php:29
+msgid ""
+"Ordering posts by descending likes count in a custom query in your theme:"
+msgstr ""
+
+#: admin/partials/settings-doc.php:8 admin/partials/settings-doc.php:20
+msgid "Outside the loop:"
+msgstr ""
+
+#. Author of the plugin
+msgid "Pierre Lebedel"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:255
+msgid "Post title"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:254
+msgid "Post type"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:76
+msgid "Right"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:213
+#: admin/partials/settings-form.php:56
+msgid "Save"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:138 admin/partials/settings.php:14
+msgid "Settings"
+msgstr ""
+
+#: admin/partials/settings-doc.php:4 admin/partials/settings-doc.php:16
+msgid "Shortcode:"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:65
+msgid "Show on the bottom of post"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:66
+msgid "Show on the top and on the bottom of post"
+msgstr ""
+
+#: includes/class-kodex-posts-likes.php:59
+#: includes/class-kodex-posts-likes.php:64
+msgid "Show on the top of post"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:208
+#, php-format
+msgid "Show stats of the last %s days"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:130
+msgid "The options are saved"
+msgstr ""
+
+#: admin/class-kodex-posts-likes-admin.php:276
+#, php-format
+msgid "View %s more"
+msgid_plural "View %s more"
+msgstr[0] ""
+msgstr[1] ""
