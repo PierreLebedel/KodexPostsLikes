@@ -57,12 +57,12 @@ if( $('#kodex_likes_dashboard').length ){
 if( $('#kodex_demo_buttons').length ){
 	
 	var xhr = $.ajax({
-		url: kodex_posts_likes.ws+'kpl_buttons/',
+		url: kodex_posts_likes.ws+'standard_buttons/kpl',
 		method: 'post',
 		data: {}, 
 		success: function(response){
 			var data = $.parseJSON(response);
-			console.log(data);
+			//console.log(data);
 			$('#kodex_demo_buttons .kodex_like_button .counter').text(data.likes);
 			$('#kodex_demo_buttons .kodex_dislike_button .counter').text(data.dislikes);
 
@@ -80,12 +80,12 @@ if( $('#kodex_demo_buttons').length ){
 		var button = $(this);
 		var btn_action = (button.is('.kodex_dislike_button')) ? 'dislike' : 'like';
 		var xhr = $.ajax({
-			url: kodex_posts_likes.ws+'kpl_vote/'+btn_action, 
+			url: kodex_posts_likes.ws+'standard_vote/kpl/'+btn_action, 
 			method: 'post',
 			data: {}, 
 			success: function(response){
 				var data = $.parseJSON(response);
-				console.log(data);
+				//console.log(data);
 				$('#kodex_demo_buttons .kodex_like_button .counter').text(data.likes);
 				$('#kodex_demo_buttons .kodex_dislike_button .counter').text(data.dislikes);
 
